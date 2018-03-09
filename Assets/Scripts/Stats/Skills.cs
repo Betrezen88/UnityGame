@@ -19,11 +19,11 @@ public class Skills {
 		}
 	}
 
-	public Dictionary<StatsEnums.Skill, Skill> GetByAttribute(StatsEnums.Attribute attribute) {
-		Dictionary<StatsEnums.Skill, Skill> list = new Dictionary<StatsEnums.Skill, Skill> ();
+	public List<Skill> GetByAttribute(StatsEnums.Attribute attribute) {
+		List<Skill> list = new List<Skill> ();
 		foreach (StatsEnums.Skill type in System.Enum.GetValues(typeof(StatsEnums.Skill))) {
 			if (attribute == skills [type].Attribute)
-				list.Add (type, skills[type]);
+				list.Add (skills[type]);
 		}
 		return list;
 	}
