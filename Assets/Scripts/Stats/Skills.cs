@@ -14,8 +14,17 @@ public class Skills {
 
 	private void CreateSkillList() {
 		SkillBuilder builder = new SkillBuilder ();
-		foreach (StatsEnums.Skill skill in System.Enum.GetValues(typeof(StatsEnums.Skill))) {
-			skills.Add (skill, builder.Build(skill));
+		foreach (StatsEnums.Skill type in System.Enum.GetValues(typeof(StatsEnums.Skill))) {
+			skills.Add (type, builder.Build(type));
 		}
+	}
+
+	public Dictionary<StatsEnums.Skill, Skill> GetByAttribute(StatsEnums.Attribute attribute) {
+		Dictionary<StatsEnums.Skill, Skill> list = new Dictionary<StatsEnums.Skill, Skill> ();
+		foreach (StatsEnums.Skill type in System.Enum.GetValues(typeof(StatsEnums.Skill))) {
+			if (attribute == skills [type].Attribute)
+				list.Add (type, skills[type]);
+		}
+		return list;
 	}
 }
