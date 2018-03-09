@@ -11,6 +11,12 @@ namespace StatsEnums {
 		CHARISMA
 	}
 
+	public enum AttrType {
+		Good,
+		Normal,
+		Bad
+	}
+
 	public enum Skill {
 		// Condition
 		Brawl,
