@@ -4,4 +4,11 @@ using UnityEngine;
 
 namespace StatsEnums {
 
+	public enum Attribute {
+		CONDITION,
+		PERCEPTION,
+		INTELIGENCE,
+		CHARISMA
+	}
+
 }
