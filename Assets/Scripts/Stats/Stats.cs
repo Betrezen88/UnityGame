@@ -6,11 +6,10 @@ public class Stats {
 
 	// Attribute list (good, normal, bad)
 
-	// Skills list
+	private Skills skills = new Skills();	// Skills list
 
 	// Characteristic (good, bad)
 
 	// Archetype
 
-	public Stats() {}
 }
